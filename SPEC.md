@@ -1,48 +1,49 @@
-# Lesson 01 specification
+# Lesson 01 Specification
 
-## STUDIO-001 · Launch a tested calculator on an existing server
+## STUDIO-001 - Launch a tested calculator on an existing server
 
-**Status:** Pending learner scope agreement and actual evidence.
-**Next step:** Confirm your clone with the coach, then follow [Lesson 01](studio/lesson-01.md).
-**Instructor implementation:** [issue #9](https://github.com/kaw393939/373_hosting/issues/9).
-Create your own issue from the [lesson template](.github/ISSUE_TEMPLATE/studio-calculator.md).
+**Status:** Calculator deployed and verified on November 2, 2026.
 
 ## Agreed result
 
-Launch the supplied published calculator image through your existing Traefik
-network and a nonconflicting HTTPS hostname. Preserve unrelated services and
-host access. Do not add another proxy/updater or build a substitute image.
-The [release selection](studio/calculator-release.json) supplies the expected
-commit and multi-platform digest independently of the running website.
-An explicitly agreed adoption of a matching existing deployment is recorded
-as adoption, not a fresh launch. This bounded lesson does not certify the whole
-server baseline or a vulnerability-free image.
+My goal was to launch the supplied calculator image on my existing DigitalOcean server using Docker and Traefik.
 
-- **Public hostname:** Pending.
-- **New launch or adopted deployment, and reason:** Pending.
-- **Own issue / feature branch:** Pending.
-- **Agreed scope or actual access/configuration gap:** Pending.
+I used my existing `hosting-web` Docker network and configured a new HTTPS hostname. I did not replace Traefik or my existing Production and QA websites.
 
-Private SSH targets and configuration stay in ignored local state. Share only
-reviewed, selected evidence; never commit credentials or raw server output.
+- **Public calculator:** https://calc.shiv-is373.xyz
+- **Deployment:** New calculator launch
+- **GitHub issue:** https://github.com/ssp344/my-server-studio/issues/1
+- **Docker network:** `hosting-web`
+- **Agreed scope:** Deploy the supplied calculator without changing existing services
+- **Remaining work:** Final checks, pull request, CI verification, and merge
 
 ## Evidence to keep
 
 | Evidence | Actual result / link |
 |---|---|
-| Prepared Black/Pylint/pytest and real-image browser checks | Not run; full local E2E needs local Docker or actual CI evidence |
-| Hosted image/commit, trusted HTTPS, valid and rejected API cases | Not verified; export selected evidence with `report` |
-| Preservation of unrelated services | Not verified |
-| Own prediction, check interpretation, browser observation and keep/revise reason | [LEARNING.md](LEARNING.md), Pending; disclose assistance |
-| Accuracy review before publishing learner excerpts | Pending |
-| Actual PR, latest CI, merge and issue closure | Pending |
+| Calculator website | https://calc.shiv-is373.xyz |
+| Hosted deployment | Passed |
+| Image and commit verification | Passed |
+| HTTPS verification | Passed |
+| Multiplication test | 6 × 7 = 42, HTTP 200 |
+| Division by zero test | HTTP 400 |
+| Invalid numeric input test | HTTP 422 |
+| Existing Docker containers | Four checked, unchanged |
+| Runtime evidence | [studio/evidence.json](studio/evidence.json) |
+| Learning summary | [LEARNING.md](LEARNING.md) |
+| GitHub issue | https://github.com/ssp344/my-server-studio/issues/1 |
+| Prepared local checks and GitHub CI | Pending |
+| Pull request and merge | Pending |
 
-Link the exported `studio/evidence.json`, actual CI and issue/PR when available.
-CI does not deploy this server. A fixture, green check, timestamp, closed issue
-or AI assertion alone does not establish the full result. `status` reports
-recorded evidence and readiness for instructor review; it does not grade,
-certify authorship or establish understanding.
+## Limitations
 
+The calculator is a supplied Docker image. I did not build the application or create its CI/CD pipeline.
+
+The automated checks confirmed selected container states and API behavior. They do not prove that the whole server is secure.
+
+My separate pre-plan request-path prediction was not recorded before deployment. This missing record is disclosed in LEARNING.md.
+
+Private SSH information and raw server configurations will not be published.
 ## Optional instructor history
 
 The records below are background, not steps to repeat. Their original anchors

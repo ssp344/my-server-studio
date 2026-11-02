@@ -1,35 +1,43 @@
-# Lesson 01 · Conversation evidence
+Lesson 01 - Conversation Evidence
 
-AI-drafted task summary, not a transcript or grade. It may be public. Use actual
-short quotes or labeled paraphrases, name any help supplied, and link actual
-work. Leave missing contributions Pending. A learner can review, correct or
-remove excerpts before publication; accuracy approval is not proof of learning.
-Label role-play honestly rather than treating it as an actual learner response.
+Lesson: STUDIO-001
 
-**Lesson:** STUDIO-001. **Available conversation context:** Not recorded yet.
+Prediction
 
-## Prediction
+Before deployment, I predicted that the browser would go to my domain, Traefik would receive the HTTPS request, and Docker would run the calculator.
 
-Pending.
+I did not record the separate request-path prediction before running the plan. I am documenting that missing record honestly.
 
-## Check interpretation
+Check interpretation
 
-Pending.
+I ran the prepared verification checks after deploying the calculator. The tests passed.
 
-## Browser observation
+The multiplication test returned 42 with HTTP 200. Division by zero returned HTTP 400, and invalid numeric input returned HTTP 422.
 
-Pending.
+The checks also confirmed trusted HTTPS and that the existing Docker containers were unchanged. These checks do not prove that the entire server is secure.
 
-## Keep decision
+Browser observation
 
-Pending.
+I opened https://calc.shiv-is373.xyz in Chrome.
 
-## Review
+I entered 6 and 7, selected Multiply, and clicked Calculate.
 
-Pending.
+The browser result was 42, and the API result was also 42. The website displayed "Results match."
 
-## AI work and next step
+Keep decision
 
-No learner trial recorded. Confirm the student's clone and SSH origin, then
-start the prepared setup. Link SPEC, actual issue/PR and sanitized evidence as
-they become available; do not fabricate missing earlier conversation.
+I decided to keep the calculator deployment because the website worked correctly, HTTPS was trusted, and the existing services remained unchanged during the checks.
+
+Review
+
+I reviewed the deployment results and my browser test with my AI coach. I learned that DNS connects my domain to my server, Traefik routes HTTPS requests, and Docker runs the calculator.
+
+I used the supplied calculator image. I did not build the calculator application or its CI/CD pipeline.
+
+AI Work and Next Step
+
+AI helped me understand the assignment, check my DigitalOcean server, configure the calculator deployment, and interpret the test results.
+
+I completed the deployment commands and tested the public website myself.
+
+My next step is to finish SPEC.md, review the sanitized evidence, run the remaining tests, and create my GitHub issue and pull request.
